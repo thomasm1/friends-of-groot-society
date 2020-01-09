@@ -1,0 +1,97 @@
+<div class="container ">
+  <!-- <button (click)="getAlbums()">Get character</button><br /> -->
+  <h4 id="eyecolor">CHARACTER</h4><br /> -->
+
+  <div style="text-align:center">
+    <br />
+    <h1>
+      <em>The Friends of <span class="groot"> {{ title }}</span> Society</em>
+    </h1>
+    <h3 class="groot">Guardians of the Galaxy API</h3>
+    <!-- <button  class="btn btn-primary" (click)="getGroot()">Get character</button> <br /> -->
+    <hr>
+    <div>
+      <button class="btn btn-primary" (click)="getCharacter()">this.grootService.getCharactersPrivate()</button>
+      <button class="btn btn-info" (click)="displayCharacters()">this.characters</button>
+      <button class="btn btn-danger" ng-click="getNewAlbums()">Get text</button>
+    </div>
+    <a routerLink="photos/{{albums.id}}">{{albums.title}}</a>
+    <div class="input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">ID</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Type</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+    </div>
+
+    <br>
+    <div>
+      <table style="width: 50%; margin-left: 25%">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Type</th>
+        </tr>
+        <tr *ngFor="let ch of characterList">
+          <td>{{albums.title}}</td>
+          <td>{{albums.id}}</td>
+          <td>{{albums.userId}}</td>
+        </tr>
+      </table>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col col-xs-6">
+      <img width="300" alt="Angular Logo" src="./assets/groot.jpg">
+    </div>
+    <div class="col col-xs-4">
+      <div class="row">
+        <div class="col-sm-" *ngFor="let album of albums | async">
+          <div class="card">
+            <div class="card-body">
+
+              <!-- <a routerLink="photos/{{album.id}}">{{album.id}} 👆</a><br /> -->
+              <a routerLink="{{characters.id}}">{{ characters }} </a><br />
+              <a routerLink="photos/{{album.id}}">{{album.title}} </a><br />
+              <img width="90" alt="Angular Logo" src="./assets/groot.jpg">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4" *ngFor="let album of albums | async">
+          <div class="card">
+            <div class="card-body">
+              <a>{{album.title}}</a>
+              <a>{{album.id}}</a>
+              <a>{{album.userId}}</a>
+              <a routerLink="photos/{{album.id}}">{{album.title}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- <button (click) = "displayAllPokemon()">Get Pokedex</button> -->
+
+
+<!-- <h6 *ngFor = "let pokemon of pokemonList">{{pokemon.id}} {{pokemon.name}} {{pokemon.type}}</h6> -->
+
+
+<!-- <input type="number" [(ngModel)] = "id">
+    <input type="text" [(ngModel)] = "name">
+    <input type="text" [(ngModel)] = "type">
+    <button  class="btn btn-info"  (click) = "addPokemon()">Add Guardian</button> -->
