@@ -12,5 +12,5 @@ phases:
         - ng build
     post_build:
       commands:
-        - aws s3 cp dist/RPAS s3://friends-of-groot-society --recursive
+        - aws s3 cp . s3://friends-of-groot-society --recursive
 
