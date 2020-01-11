@@ -6,12 +6,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
-import { GrootComponent } from '../components/groot/groot.component';
-import { PhotosComponent } from '../components/photos/photos.component';
+import { GrootComponent } from './components/groot/groot.component';
+import { PhotosComponent } from './components/photos/photos.component';
 
 import { GrootService } from './services/groot.service';
-import { StarwarsComponent } from '../components/starwars/starwars.component';
-import { MarvelComponent } from './marvel/marvel.component';
+import { StarwarsComponent } from './components/starwars/starwars.component';
+import { MarvelComponent } from './components/marvel/marvel.component';
 
 @NgModule({
   declarations: [

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'; 
-import { GrootService } from '../../app/services/groot.service';
+import { GrootService } from '../../services/groot.service';
 import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-photos',

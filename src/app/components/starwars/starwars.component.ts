@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GrootService } from '../../app/services/groot.service'; 
+import { GrootService } from '../../services/groot.service'; 
 
 @Component({
   selector: 'app-starwars',
