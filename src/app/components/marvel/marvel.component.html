@@ -9,10 +9,8 @@
     <hr>
     <div>
       <button class="btn btn-primary" (click)="getCharacter()"> this.grootService.getCharactersPrivate()</button>
-      <button class="btn btn-info" (click)="displayCharacters()">this.characters</button>
-      <button class="btn btn-danger" ng-click="getNewAlbums()">Get text</button>
-    </div>
-    <a routerLink="photos/{{albums.id}}">{{albums.title}}</a>
+      <button class="btn btn-info" (click)="displayCharacters()">this.characters</button> 
+    </div> 
     <div class="input-group input-group-sm mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-sm">ID</span>
@@ -37,9 +35,7 @@
           <th>Type</th>
         </tr>
         <tr *ngFor="let ch of characterList">
-          <td>{{albums.title}}</td>
-          <td>{{albums.id}}</td>
-          <td>{{albums.userId}}</td>
+          
         </tr>
       </table>
 
