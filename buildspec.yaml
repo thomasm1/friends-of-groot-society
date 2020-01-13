@@ -12,5 +12,5 @@ phases:
         - ng build --prod
     post_build:
       commands:
-        - aws s3 cp ./dist/Guardians s3://friends-of-groot-society --recursive
+        - aws s3 cp dist/Guardians s3://friends-of-groot-society --recursive
   
