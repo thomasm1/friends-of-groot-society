@@ -9,17 +9,26 @@ import { AppComponent } from './app.component';
 import { GrootComponent } from './components/groot/groot.component';
 import { PhotosComponent } from './components/photos/photos.component';
 
-import { GrootService } from './services/groot.service';
+
 import { StarwarsComponent } from './components/starwars/starwars.component';
 import { MarvelComponent } from './components/marvel/marvel.component';
-
+import { AboutComponent } from './components/about/about.component';
+import { GrootedexComponent } from './components/grootedex/grootedex.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
+ 
+import { GrootService } from './services/groot.service';
+import { NavComponent } from './components/layout/nav/nav.component';
 @NgModule({
   declarations: [
     AppComponent,
     GrootComponent,
     PhotosComponent,
     StarwarsComponent,
-    MarvelComponent
+    MarvelComponent,
+    AboutComponent,
+    GrootedexComponent,
+    ContactusComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +36,7 @@ import { MarvelComponent } from './components/marvel/marvel.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [
+  providers: [ 
     GrootService
   ],
   bootstrap: [AppComponent]

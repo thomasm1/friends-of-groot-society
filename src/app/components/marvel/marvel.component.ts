@@ -15,7 +15,7 @@ export class MarvelComponent implements OnInit {
   ngOnInit() {
       // this.displayAllCharacters();
   }
-    characterList: Character[] = [];  // :Pokemon[] = :Array:Pokemon
+    characterList: Character[] = [];  // :Groot[] = :Array:Groot
   allCharacters: Observable<Character[]> = this.grootService.getCharacters();
 
   getCharacter() {
@@ -45,8 +45,8 @@ export class MarvelComponent implements OnInit {
       }
     );
   }
-    // pokemonList :Pokemon[] = [];  // :Pokemon8[] = :Array:Pokemon
-  // allPokemon :Observable<Pokemon[]> = this.pokeService.getAllPokemon();
+    // grootList :Groot[] = [];  // :Groot8[] = :Array:Groot
+  // allGroot :Observable<Groot[]> = this.pokeService.getAllGroot();
 
 
 }

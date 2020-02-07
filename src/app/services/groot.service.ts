@@ -2,17 +2,32 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Character } from '../models/Character';
+import { Groot } from '../models/Groot';
+import { Greeting } from '../models/Greeting';
+
+// @Injectable is a decorator that marks a class as a target for
+// dependency injection. The class needs to have the HttpClient
+// object injected into it. This class is a candidate for dependency
+// injection because it is declared inside the AppModule's providers array.
 @Injectable({
   providedIn: 'root'
 })
 
+
+
 export class GrootService {
   private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+ 
+  constructor(private http :HttpClient) { }
 
-  constructor(
-    private http: HttpClient 
-  ) {  }
 
+  getAllGroot() :Observable<Groot[]> {
+    return this.http.get<Groot[]>("http://localhost:8080/PokeApp/getAllGroot.do");
+  }
+
+  addGroot(poke :Groot) :Observable<Groot> {
+    return this.http.post<Groot>("http://localhost:8080/PokeApp/addGroot.do", poke, {headers: this.headers});
+  }
   // addCharacter(char :Character) :Observable<Character> {
   //   return this.http.post<Character>("http://localhost:8080/PokeApp/addCharacters.do", char, {headers: this.headers});
   // }

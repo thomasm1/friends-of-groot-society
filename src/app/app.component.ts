@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tm';
+  title = 'Friends of Groot Society';
   showLoadingIndicator = true;
   // constructor(private _router: Router) {
   //   this._router.events.subscribe((routerEvent: Event) => {
