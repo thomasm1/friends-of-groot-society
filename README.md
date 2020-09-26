@@ -1,6 +1,6 @@
 ## groot-app
 Java Application for Friends of Groot Society
-<a style="margin-left:20%;" href="http://doggywood.s3-website-us-east-1.amazonaws.com
+<a style="margin-left:20%;" href="https://friends-of-groot-society.s3-website-us-east-1.amazonaws.com
 ">
 <img width="200" src="https://friends-of-groot-society.s3.amazonaws.com/assets/grootsmall.png" title="Friends_of_Groot_Society_App" alt="Friends_of_Groot_Society_Image"></a>
 
@@ -8,15 +8,25 @@ Java Application for Friends of Groot Society
 > <a style="text-decoration:none;color:black;" href="http://friends-of-groot-society.s3-website-us-east-1.amazonaws.com/grootedex">Friends_of_Groot_Society</a>
 
 > Full-Stack application that manages Groot Fan Club News and Features
- 
+
 ### Author 
 > Thomas Maestas 
 
 ### Application Overview
 The mission of the app is to organize and persist Groot Fan Club News and Guardians-of-the-Galaxy Events
 
-#### Purposes
-The mission of the app is to organize and persist Groot Fan Club News and Guardians-of-the-Galaxy Events
+### Remote Production Server
+Oracle 11SE, Hosted by AWS RDS with endpoint:
+
+### Remote Development Server
+H2 Database, Hosted by AWS EC2 using Groot-Data endpoint: http://35.173.4.147:8080/api/groot
+
+### Local Development Server
+Node.js and Express application hosted at localhost endpoint: http://localhost:8080/api/groot
+ > Instructions: 
+`sh
+node server/express
+`
 
 ### Technologies 
 | Fx | Tools | URLS |
@@ -104,13 +114,13 @@ As a system, it will notify us if the vaccination record will expire before the 
 * [Jenkins]: <https://jenkins.io/> 
 * [CodeBuild]:<https://aws.amazon.com/codebuild/> 
    
-  website: [doggywood.io](http://doggywood.s3-website-us-east-1.amazonaws.com/t)
- 
-
 #### URLS for Angular/Material:
 #### https://material.io
 #### https://angular.io 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21. 
+
+> website: [friends-of-groot-society.io](http://friends-of-groot-society.s3-website-us-east-1.amazonaws.com/)
+ 
 
 
 ### INSTRUCITONS:  Development server

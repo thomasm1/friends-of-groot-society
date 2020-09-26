@@ -20,7 +20,10 @@ export class GrootedexComponent implements OnInit {
   allGroot :Observable<Groot[]> = this.grootService.getAllGroot();
 
 
-  id :number;
+  // id :number;
+  isbn: string;
+  author: string;
+  title: string;
   name :string;
   type :string;
 
@@ -48,7 +51,8 @@ export class GrootedexComponent implements OnInit {
   addGroot() {
     this.validateInputFields();
     if(this.validInputs) {
-      this.grootService.addGroot(new Groot(this.id, this.name, this.type)).subscribe(
+
+      this.grootService.addGroot(new Groot(this.isbn,  this.name, this.type, this.author, this.title)).subscribe(
         (response) => {
           console.log(response);
           let list = this.grootList.slice();
@@ -64,11 +68,13 @@ export class GrootedexComponent implements OnInit {
   }
 
   validateInputFields() {
-    console.log(this.id);
+    console.log(this.isbn);
+    console.log(this.author);
+    console.log(this.title);
     console.log(this.name);
     console.log(this.type);
 
-    if(this.id == undefined ||
+    if(this.isbn == undefined ||
        this.name == undefined ||
        this.name == "" ||
        this.type == undefined ||
