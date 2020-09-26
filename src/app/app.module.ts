@@ -7,8 +7,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor, ErrorInterceptor } from './helpers';
 import { TitleCasePipe } from '@angular/common';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
-  
-// DEVELOPMENT/PROD URL (replace file in angular.json) 
+
+// DEVELOPMENT/PROD URL (replace file in angular.json)
 import { environment } from '../environments/environment';
 
 // NEWS
@@ -19,16 +19,17 @@ import { NewsToolBarComponent } from './components/news-tool-bar/news-tool-bar.c
 
 // GROOT-MARVEL
 import { GrootComponent } from './components/groot/groot.component';
-import { PhotosComponent } from './components/photos/photos.component'; 
+import { PhotosComponent } from './components/photos/photos.component';
 import { StarwarsComponent } from './components/starwars/starwars.component';
 import { MarvelComponent } from './components/marvel/marvel.component';
-import { BookComponent } from './components/book/book.component'; 
+import { BookComponent } from './components/book/book.component';
 import { GrootologueComponent } from './components/grootologue/grootologue.component';
+import { GrootedexComponent } from './components/grootedex/grootedex.component';
 
 // LAYOUT
 import { NavComponent } from './components/layout/nav/nav.component';
-import { ContactusComponent } from './components/layout/contactus/contactus.component';
-import { AboutComponent } from './components/layout/about/about.component';
+// import { ContactusComponent } from './components/layout/contactus/contactus.component';
+// import { AboutComponent } from './components/layout/about/about.component';
 import { LoginComponent } from './components/users/login/login.component';
 import { RegisterComponent } from './components/users/register/register.component';
 
@@ -40,12 +41,12 @@ import { PipeCapitalizeCategoryPipe } from './utility/pipe-capitalize-category.p
 
 // STORE
 import { StoreModule } from '@ngrx/store';
-import {  reducers} from './reducers'; //, metaReducers 
+import {  reducers} from './reducers'; //, metaReducers
 
 
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -56,11 +57,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatDatepickerModule } from '@angular/material/datepicker'; 
+import { MatDatepickerModule } from '@angular/material/datepicker';
 // import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatNativeDateModule } from '@angular/material/core';
 import { UsersComponent } from './components/users/users.component';
-import { AlertComponent } from './utility/alert.component'; 
+import { AlertComponent } from './utility/alert.component';
 
 @NgModule({
   declarations: [
@@ -69,9 +70,10 @@ import { AlertComponent } from './utility/alert.component';
     PhotosComponent,
     StarwarsComponent,
     MarvelComponent,
-    AboutComponent,
     GrootologueComponent,
-    ContactusComponent,
+    GrootedexComponent,
+    // AboutComponent,
+    // ContactusComponent,
     NavComponent,
     LoginComponent,
     RegisterComponent,
@@ -82,12 +84,12 @@ import { AlertComponent } from './utility/alert.component';
     NewsToolBarComponent,
     PipeCapitalizeCategoryPipe,
     UsersComponent,
-    AlertComponent 
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule, 
+    HttpClientModule,
     FormsModule,
     LayoutModule,
     ReactiveFormsModule,
@@ -115,7 +117,7 @@ import { AlertComponent } from './utility/alert.component';
     // }
     )
   ],
-  providers: [ 
+  providers: [
     BookService,
     GrootService,
     NewsService,
@@ -126,7 +128,7 @@ import { AlertComponent } from './utility/alert.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
- 
+
 ////////////////////////////////////////////////////////
 // 5fbd9e22b0c348faa25fd3d07bee8248
 

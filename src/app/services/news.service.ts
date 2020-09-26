@@ -24,14 +24,14 @@ export class NewsService {
     if (data.sort !== undefined) {
        params = params.set('sort', data.sort);
     }
-    return this.http.get(`${environment.apiUrl}/search/v2/articlesearch.json`,{
-      params 
+    return this.http.get(  `${environment.apiUrlNYT}/search/v2/articlesearch.json`,{
+      params
     });
   }
   getArticles(section:string = 'home') {
     let params: HttpParams = new HttpParams();
     params = params.set('api-key', environment.apiKeyNYT);
 
-  return this.http.get(`${environment.apiUrl}/topstories/v2/${section}.json`, {params });
+  return this.http.get(`${environment.apiUrlNYT}/topstories/v2/${section}.json`, {params });
   }
 }
