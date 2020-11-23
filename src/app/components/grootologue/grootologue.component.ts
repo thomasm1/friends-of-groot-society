@@ -21,12 +21,14 @@ export class GrootologueComponent implements OnInit {
   }
 
   genreFilter: string;
-  grootList: Groot[] = [];  
+  grootList: Groot[] = [];
   allGroot: Observable<Groot[]> = this.grootService.getAllGroot();
- 
+
   randomIsbn: number = 6789;
+
+  id = null;
   isbn = 'e4e8d3e0-3914-4458-bebf-4928947';
-  
+
   author: string = "";
   title: string= "";
   name: string= "";
@@ -34,8 +36,8 @@ export class GrootologueComponent implements OnInit {
 
   validInputs: boolean = false;
   validation: string = "All 4 fields are required";
- 
-  displayAllGroot() { 
+
+  displayAllGroot() {
     this.allGroot.subscribe(
       //function to execute when the Observable
       //receives information because the call is successful.
@@ -56,27 +58,27 @@ export class GrootologueComponent implements OnInit {
   // Overwrites default list
   filterByDBGroot() {
     this.grootService.getFilteredGroot(this.genreFilter).subscribe(
-       data  => {  
-        this.grootList = data; 
-        console.log(this.grootList); 
+       data  => {
+        this.grootList = data;
+        console.log(this.grootList);
       },
       (data) => {
         return "no response, no groot?"
       }
     );
-  } 
+  }
 
 
   addGroot() {
     this.validateInputFields();
     if (this.validInputs) {
-      
+
       // Generate randomized last 4 digits for mock data
       this.randomIsbn = this.getRandomInt(this.randomIsbn);
       this.isbn = this.isbn + this.randomIsbn;
       console.log("randomized: " + this.isbn);
 
-      this.grootService.addGroot(new Groot(this.isbn, this.author, this.title, this.name, this.type)).subscribe(
+      this.grootService.addGroot(new Groot(this.id, this.isbn, this.author, this.title, this.name, this.type)).subscribe(
         (response) => {
           console.log(response);
           let list = this.grootList.slice();
@@ -92,7 +94,7 @@ export class GrootologueComponent implements OnInit {
     }
   }
 
-  validateInputFields() { 
+  validateInputFields() {
 
     if (
       this.author == undefined ||

@@ -6,11 +6,12 @@
 
 <div>
     <input type="number" [(ngModel)] = "id">
+    <input type="text" [(ngModel)] = "isbn">
     <input type="text" [(ngModel)] = "name">
     <input type="text" [(ngModel)] = "type">
     <button (click) = "addGroot()">Add Groot News</button>
     <!-- <p *ngIf="!validInputs">{{validation}}</p> -->
-    <p>{{validateFields(id,name,type)}}</p>
+    <p>{{validateFields(id,isbn, name,type)}}</p>
     <br>
 </div>
 
