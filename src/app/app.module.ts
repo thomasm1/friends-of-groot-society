@@ -28,8 +28,8 @@ import { GrootedexComponent } from './components/grootedex/grootedex.component';
 
 // LAYOUT
 import { NavComponent } from './components/layout/nav/nav.component';
-// import { ContactusComponent } from './components/layout/contactus/contactus.component';
-// import { AboutComponent } from './components/layout/about/about.component';
+import { ContactusComponent } from './components/layout/contactus/contactus.component';
+import { AboutComponent } from './components/layout/about/about.component';
 import { LoginComponent } from './components/users/login/login.component';
 import { RegisterComponent } from './components/users/register/register.component';
 
@@ -72,8 +72,8 @@ import { AlertComponent } from './utility/alert.component';
     MarvelComponent,
     GrootologueComponent,
     GrootedexComponent,
-    // AboutComponent,
-    // ContactusComponent,
+    AboutComponent,
+    ContactusComponent,
     NavComponent,
     LoginComponent,
     RegisterComponent,
